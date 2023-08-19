@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+   android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/tb_demo"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+
+            android:layout_width="match_parent"
+            android:background="#3F51B5"
+            android:layout_height="?attr/actionBarSize">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_java"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:layout_marginLeft="10dp"
+                    android:text="DemoJavaProject"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight=".8">
+        <ImageView
+            android:id="@+id/iv_image"
+            android:visibility="gone"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="200dp"
+            android:layout_below="@+id/tb_demo"
+            android:layout_height="200dp"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lav_animation"
+            android:layout_width="match_parent"
+            app:lottie_fileName="loading2.json"
+            android:scaleType="centerCrop"
+            app:lottie_loop="true"
+            android:layout_height="200dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/b_zoom"
+                android:layout_margin="10dp"
+                android:layout_width="100dp"
+                android:background="#3F51B5"
+                android:text="ZOOM"
+                app:backgroundTint="@null"
+                android:layout_height="40dp"/>
+
+            <Button
+                android:id="@+id/b_rotate"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="ROTATE"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@+id/b_zoom"
+                android:background="#3F51B5"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/b_fade"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@+id/b_rotate"
+                android:background="#3F51B5"
+                android:text="FADE"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/b_blink"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/b_zoom"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#3F51B5"
+                android:text="BLINK"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/b_move"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/b_rotate"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@+id/b_blink"
+                android:background="#3F51B5"
+                android:text="MOVE"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/b_slide"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/b_fade"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@+id/b_move"
+                android:background="#3F51B5"
+                android:text="SLIDE"
+                app:backgroundTint="@null" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
